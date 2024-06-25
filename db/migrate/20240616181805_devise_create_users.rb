@@ -8,9 +8,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.string :encrypted_password, null: false, default: ""
       t.string :name,               null: false, default: ""
       t.string :surname,            null: false, default: ""
-      t.integer :age
-      t.string :nickname,           null: false, default: ""
-      t.string :gender              null: false, default: ""
+      t.date :born_on,              null: false
+      t.string :username,           null: false, default: ""
+      t.string :gender,             null: false, default: ""
 
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
@@ -20,6 +20,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       t.timestamps null: false
     end
 
+    add_index :users, :username,             unique: true
     add_index :users, :email,                unique: true
     add_index :users, :phone,                unique: true
     add_index :users, :reset_password_token, unique: true

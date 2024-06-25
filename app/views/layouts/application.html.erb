@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %><br />
+
+    <% if user_signed_in? %>
+      <h1><%= current_user.name %></h1>
+      <%= link_to t("log_out"), destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to t("sign_up"), new_user_registration_path %><br />
+      <%= link_to t("log_in"), new_user_session_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
