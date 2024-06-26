@@ -1,18 +1,39 @@
 en:
-  title: 'Home page'
-  log_in: 'Log in'
-  sign_up: 'Sign up'
-  log_out: 'Log out'
-  user:
-    registration:
-      email: 'Email'
-      phone: 'Phone'
-      name: 'Name'
-      surname: 'Surname'
-      username: 'Username'
-      gender: 'Gender'
-      born_on: 'Born on'
-      password: 'Password'
-      password_coonfirm: 'Password confirm'
-      man: "Man"
-      woman: "Woman"
+  title: "Home page"
+  welcome: "Welcome"
+  log_in: "Log in"
+  sign_up: "Sign up"
+  log_out: "Log out"
+  click_the_link: "Click the link below to unlock your account:"
+  unlock_my_account: "Unlock my account"
+  your_account_has_been_locked: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+  your_password_won't_change: "Your password won't change until you access the link above and create a new one."
+  please_ignore_this_email: "If you didn't request this, please ignore this email."
+  someone_has_requested: "Someone has requested a link to change your password. You can do this through the link below."
+  email_is_being_chenged_to: "We're contacting you to notify you that your email is being changed to"
+  email_has_been_chenged_to: "We're contacting you to notify you that your email has been changed to"
+  new_password: "New password"
+  confirm_new_password: "Confirm new password"
+  remember_me: "Remember me"
+  change_your_password: "Change your password"
+  change_my_password: "Change my password"
+  forgot_password: "Forgot your password?"
+  confirm_instructions: "Didn't receive confirmation instructions?"
+  unlock_instructons: "Didn't receive unlock instructions?"
+  send_me_instructions: "Send me reset password instructions"
+  resend_unlock: "Resend unlock instructions"
+  resend_confirm: "Resend confirmation instructions"
+  confirm_account_link: "You can confirm your account email through the link below:"
+  confirm_my_account: "Confirm my account"
+  registration:
+    email: "Email"
+    phone: "Phone"
+    name: "Name"
+    surname: "Surname"
+    username: "Username"
+    gender: "Gender"
+    born_on: "Born on"
+    password: "Password"
+    password_confirm: "Password confirm"
+    man: "Man"
+    woman: "Woman"
