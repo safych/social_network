@@ -4,14 +4,15 @@ en:
   log_in: "Log in"
   sign_up: "Sign up"
   log_out: "Log out"
+  cannot_be_in_the_future: "Can't be in the future"
   click_the_link: "Click the link below to unlock your account:"
   unlock_my_account: "Unlock my account"
   your_account_has_been_locked: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
   your_password_won't_change: "Your password won't change until you access the link above and create a new one."
   please_ignore_this_email: "If you didn't request this, please ignore this email."
   someone_has_requested: "Someone has requested a link to change your password. You can do this through the link below."
-  email_is_being_chenged_to: "We're contacting you to notify you that your email is being changed to"
-  email_has_been_chenged_to: "We're contacting you to notify you that your email has been changed to"
+  email_is_being_changed_to: "We're contacting you to notify you that your email is being changed to"
+  email_has_been_changed_to: "We're contacting you to notify you that your email has been changed to"
   new_password: "New password"
   confirm_new_password: "Confirm new password"
   remember_me: "Remember me"
@@ -19,12 +20,74 @@ en:
   change_my_password: "Change my password"
   forgot_password: "Forgot your password?"
   confirm_instructions: "Didn't receive confirmation instructions?"
-  unlock_instructons: "Didn't receive unlock instructions?"
+  unlock_instructions: "Didn't receive unlock instructions?"
   send_me_instructions: "Send me reset password instructions"
   resend_unlock: "Resend unlock instructions"
   resend_confirm: "Resend confirmation instructions"
   confirm_account_link: "You can confirm your account email through the link below:"
   confirm_my_account: "Confirm my account"
+
+  devise:
+    failure:
+      unauthenticated: 'You need to sign in or sign up before continuing.'
+      unconfirmed: 'You have to confirm your account before continuing.'
+      locked: 'Your account is locked.'
+      invalid: 'Invalid %{authentication_keys} or password.'
+      invalid_token: 'Invalid authentication token.'
+      timeout: 'Your session expired. Please sign in again to continue.'
+      already_authenticated: 'You are already signed in.'
+      not_found_in_database: 'Invalid %{authentication_keys} or password.'
+      inactive: 'Your account is not activated yet.'
+
+    registrations:
+      signed_up: 'Welcome! You have signed up successfully.'
+      signed_up_but_inactive: 'You have signed up successfully. However, we could not sign you in because your account is not yet activated.'
+      signed_up_but_locked: 'You have signed up successfully. However, we could not sign you in because your account is locked.'
+      signed_up_but_unconfirmed: 'You have signed up successfully. However, we could not sign you in because your account is unconfirmed.'
+      update_needs_confirmation: 'You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to verify your new email address.'
+      updated: 'You updated your account successfully.'
+      destroyed: 'Bye! Your account has been successfully cancelled. We hope to see you again soon.'
+
+    sessions:
+      signed_in: 'Signed in successfully.'
+      signed_out: 'Signed out successfully.'
+      already_signed_out: 'Signed out successfully.'
+
+    passwords:
+      send_instructions: 'You will receive an email with instructions on how to reset your password in a few minutes.'
+      updated: 'Your password has been changed successfully. You are now signed in.'
+      updated_not_active: 'Your password has been changed successfully.'
+
+    confirmations:
+      send_instructions: 'You will receive an email with instructions on how to confirm your account in a few minutes.'
+      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+
+    unlocks:
+      send_instructions: 'You will receive an email with instructions on how to unlock your account in a few minutes.'
+      unlocked: 'Your account has been unlocked successfully. Please sign in to continue.'
+
+  errors:
+    models:
+      user:
+        attributes:
+          email:
+            blank: "can't be blank"
+            taken: "has already been taken"
+          phone:
+            blank: "can't be blank"
+            taken: "has already been taken"
+            invalid: "must be a valid international phone number"
+          gender:
+            inclusion: "%{value} is not a valid gender"
+          born_on:
+            cannot_be_in_the_future: "Can't be in the future"
+          username:
+            invalid: "is to long"
+          name:
+            invalid: "is to long"
+          surname:
+            invalid: "is to long"
+
   registration:
     email: "Email"
     phone: "Phone"
