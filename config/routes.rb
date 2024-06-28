@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       passwords: "users/passwords"
     }
 
-    resource :profile, only: [:show, :edit, :update]
+    resource :profile, only: :show
     resources :users, only: :update
   end
 end

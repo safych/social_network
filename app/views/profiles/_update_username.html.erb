@@ -1,18 +1,18 @@
 <h1><%= t("update_username") %></h1>
 <%= form_with(model: @user, local: true, url: user_path(@user), method: :patch) do |f| %>
-  <% if @user.errors.any? %>
+  <% if @user.errors[:base].any?  %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-      <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+      <%= @user.errors[:base].first %>
     </div>
   <% end %>
 
   <% flash.each do |key, value| %>
-    <div class="flash <%= key %>" style="<%= "color: #3c763d;" %>"><%= value %></div>
+    <% if flash[:done]  %>
+      <div class="flash <%= key %>" style="<%= "color: #3c763d;" %>"><%= value %></div>
+    <% elsif flash[:error] %>
+      <div class="flash <%= key %>" style="<%= "color: red;" %>"><%= value %></div>
+    <% end %>
+
   <% end %>
 
   <div class="field">

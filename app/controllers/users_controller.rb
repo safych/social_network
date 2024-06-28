@@ -4,10 +4,11 @@ class UsersController < ApplicationController
 
   def update
     if UserUpdater.new(@user, user_params, self).update
-      redirect_to profile_path, notice: I18n.t("profile_was_successfully_updated")
+      flash[:done] = I18n.t("profile_was_successfully_updated")
+      redirect_to profile_path
     else
-      render :show, layout: "profile"
-    end
+      flash[:error] = @user.errors[:base].first
+      redirect_to profile_path
   end
 
   private

@@ -21,7 +21,7 @@ class UserUpdater
         false
       end
     else
-      @user.errors.add(:password, I18n.t("is_incorrect_password"))
+      @user.errors.add(:base, I18n.t("is_incorrect_password"))
       false
     end
   end
