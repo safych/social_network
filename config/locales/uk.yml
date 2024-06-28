@@ -26,6 +26,14 @@ uk:
   resend_confirm: "Надіслати інструкції підтвердження повторно"
   confirm_account_link: "Ви можете підтвердити свою електронну адресу через посилання нижче:"
   confirm_my_account: "Підтвердити мій акаунт"
+  age: "Вік"
+  update_password: "Оновити пароль"
+  update_username: "Оновити псевдонім"
+  update: "Оновити"
+  profile_was_successfully_updated: "Дані було успішно оновлено."
+  is_incorrect_data: "Дані введено некоректно"
+  is_incorrect_password: "Пароль введено некоректно"
+  profile: "Профіль"
 
   devise:
     failure:

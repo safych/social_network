@@ -26,6 +26,14 @@ en:
   resend_confirm: "Resend confirmation instructions"
   confirm_account_link: "You can confirm your account email through the link below:"
   confirm_my_account: "Confirm my account"
+  age: "Age"
+  update_password: "Update password"
+  update_username: "Update username"
+  update: "Update"
+  profile_was_successfully_updated: "Profile was successfully updated."
+  is_incorrect_data: "The data was entered incorrectly"
+  is_incorrect_password: "The password was entered incorrectly"
+  profile: "Profile"
 
   devise:
     failure:

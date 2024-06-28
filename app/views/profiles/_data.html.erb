@@ -1,0 +1,9 @@
+<h1>@<%= current_user.username %></h1>
+<% if current_user.avatar.attached? %>
+  <%= image_tag current_user.avatar %><br />
+<% end %>
+<p><%= t("registration.name") %>: <%= current_user.name %></p>
+<p><%= t("registration.surname") %>: <%= current_user.surname %></p>
+<p><%= t("registration.born_on") %>: <%= current_user.born_on %></p>
+<p><%= t("registration.gender") %>: <%= current_user.gender %></p>
+<p><%= t("age") %>: <%= Date.today.year - current_user.born_on.year %> years</p>

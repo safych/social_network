@@ -4,9 +4,12 @@ Rails.application.routes.draw do
 
     devise_for :admins
     devise_for :users, controllers: {
-      registrations: 'users/registrations',
-      sessions: 'users/sessions',
-      passwords: 'users/passwords'
+      registrations: "users/registrations",
+      sessions: "users/sessions",
+      passwords: "users/passwords"
     }
+
+    resource :profile, only: [:show, :edit, :update]
+    resources :users, only: :update
   end
 end

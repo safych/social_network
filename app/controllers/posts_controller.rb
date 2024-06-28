@@ -1,24 +1,28 @@
 class PostsController < ApplicationController
-    before_action :find_post
+  before_action :find_post
 
-    def create
+  def create
 
-    end
+  end
 
-    def destroy
+  def destroy
 
-    end
+  end
 
-    def update
+  def update
 
-    end
+  end
 
-    def show
-    end
+  def show
+  end
 
-    private
+  private
 
-    def find_post
-        @post = Post.find(params[:id])
-    end
+  def find_post
+      @post = Post.find(params[:id])
+  end
+
+  def params
+      params.require(:post).permit(:title, :description, :image)
+  end
 end
