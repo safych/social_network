@@ -1,0 +1,13 @@
+<h1><%= t("author") %>: @<%= @post.user.username %></h1>
+<% if @post.avatar.attached? %>
+  <div class="image">
+    <%= image_tag(@post.avatar, style: 'width: 800px;') %>
+  </div>
+<% end %>
+<div class="content">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.description %></p>
+</div>
+
+<br />
+<h2><%= t("comments") %></h2>

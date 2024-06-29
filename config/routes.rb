@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
     resource :profile, only: :show
     resources :users, only: :update
+    resources :posts, except: :new  
   end
 end

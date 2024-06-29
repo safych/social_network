@@ -1,0 +1,26 @@
+<% if @posts.respond_to?(:each) %>
+  <% @posts.each do |post| %>
+    <a href="<%= post_path(post) %>" style='text-decoration: none;'>
+      <% if post.avatar.attached? %>
+        <div class="image">
+          <%= image_tag(post.avatar, style: 'width: 600px;') %>
+        </div>
+      <% end %>
+      <div class="content">
+        <h1 style="color: black"><%= post.title %></h1>
+      </div>
+    </a>
+  <% end %>
+<% else %>
+  <% post = @posts %>
+  <a href="<%= post_path(post) %>" style='text-decoration: none;'>
+    <% if post.avatar.attached? %>
+      <div class="image">
+        <%= image_tag(post.avatar, style: 'width: 600px;') %>
+      </div>
+    <% end %>
+    <div class="content">
+      <h1 style="color: black"> <%= post.title %> </h1>
+    </div>
+  </a>
+<% end %>

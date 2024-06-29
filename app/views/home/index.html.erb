@@ -1,1 +1,7 @@
 <h1><%= t("title") %></h1>
+<% if user_signed_in? %>
+  <%= render "home/create_post", post: @post %>
+<% end %>
+
+<br />
+<%= render "home/all_posts" %>

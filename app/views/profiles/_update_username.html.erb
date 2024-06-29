@@ -1,11 +1,9 @@
 <h1><%= t("update_username") %></h1>
 <%= form_with(model: @user, local: true, url: user_path(@user), method: :patch) do |f| %>
   <% flash.each do |key, value| %>
-    <% if flash[:done]  %>
-      <div class="flash <%= key %>" style="<%= "color: #3c763d;" %>"><%= value %></div>
-    <% elsif flash[:error] %>
-      <div class="flash <%= key %>" style="<%= "color: red;" %>"><%= value %></div>
-    <% end %>
+    <div class="flash <%= key %>" style="<%= key == 'done' ? 'color: #3c763d;' : 'color: red;' %>">
+      <%= value %>
+    </div>
   <% end %>
 
   <div class="field">
