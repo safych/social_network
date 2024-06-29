@@ -34,6 +34,12 @@ uk:
   is_incorrect_data: "Дані введено некоректно"
   is_incorrect_password: "Пароль введено некоректно"
   profile: "Профіль"
+  post_title: "Назва публікації"
+  post_description: "Опис публікації"
+  create_post: "Створити публікацію"
+  post_created: "Публікацію успішно створено"
+  post_error: "Публікацію не створено. Спробуйте ще раз пізніше."
+  avatar: "Фото"
 
   devise:
     failure:

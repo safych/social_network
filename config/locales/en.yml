@@ -34,6 +34,12 @@ en:
   is_incorrect_data: "The data was entered incorrectly"
   is_incorrect_password: "The password was entered incorrectly"
   profile: "Profile"
+  post_title: "Post title"
+  post_description: "Post description"
+  create_post: "Create post"
+  post_created: "Post successfully created"
+  post_error: "Post didn't create. Try again later."
+  avatar: "Photo"
 
   devise:
     failure:
