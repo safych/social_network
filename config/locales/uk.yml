@@ -42,6 +42,15 @@ uk:
   avatar: "Фото"
   comments: "Коментарі"
   author: "Автор"
+  comment_created: "Коментар успішно створено"
+  comment_error_create: "Коментар не створено. Спробуйте ще раз пізніше."
+  create_comment: "Створити коментар"
+  comment: "Коментар"
+  comment_destroyed: "Коментар успішно видалено"
+  you_are_not_current_user: "Ви не автор"
+  comment_error_destroyed: "Коментар не видалено. Спробуйте ще раз пізніше"
+  post_destroyed: "Публікацію успішно видаллено"
+  post_error_destroyed: "Публікацію не видалено. Спробуйте ще раз пізніше"
 
   devise:
     failure:

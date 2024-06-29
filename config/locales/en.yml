@@ -42,6 +42,15 @@ en:
   avatar: "Photo"
   comments: "Comments"
   author: "Author"
+  comment_created: "Comment successfully created"
+  comment_error_create: "Comment didn't create. Try again later."
+  create_comment: "Create comment"
+  comment: "Comment"
+  comment_destroyed: "Comment successfully destroyed"
+  you_are_not_current_user: "You are not current user"
+  comment_error_destroyed: "Comment didn't destroy. Try again later."
+  post_destroyed: "Post successfully destroyed"
+  post_error_destroyed: "Post didn't destroy. Try again later."
 
   devise:
     failure:
