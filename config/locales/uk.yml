@@ -40,6 +40,8 @@ uk:
   post_created: "Публікацію успішно створено"
   post_error: "Публікацію не створено. Спробуйте ще раз пізніше."
   avatar: "Фото"
+  comments: "Коментарі"
+  author: "Автор"
 
   devise:
     failure:

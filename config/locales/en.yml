@@ -40,6 +40,8 @@ en:
   post_created: "Post successfully created"
   post_error: "Post didn't create. Try again later."
   avatar: "Photo"
+  comments: "Comments"
+  author: "Author"
 
   devise:
     failure:
