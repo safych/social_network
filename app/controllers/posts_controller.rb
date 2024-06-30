@@ -1,20 +1,25 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
   before_action :find_post, only: [:destroy, :update, :show]
 
   def create
     @post = Post.new(post_params.merge(user_id: current_user.id))
     if @post.save
       flash[:done] = I18n.t("post_created")
-      redirect_to root_path
     else
       flash[:error] = I18n.t("post_error")
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   def destroy
-
+    notice = nil
+    if PostDestroyer(@post, notice, current_user.id).destroy
+      flash[:done] = notice
+    else
+      flash[:error] = notice
+    end
+    redirect_back(fallback_location: root_path)
   end
 
   def update
@@ -22,6 +27,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = Comment.where(post_id: @post.id).limit(50).order(id: :desc)
   end
 
   private

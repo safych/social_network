@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
 
   has_many :likes, as: :likeable, dependent: :destroy
 
-  validates :description, presence: true, to: 200
+  validates :description, presence: true, length: { maximum: 150 }
 end

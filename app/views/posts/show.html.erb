@@ -11,3 +11,38 @@
 
 <br />
 <h2><%= t("comments") %></h2>
+<% if user_signed_in? %>
+  <%= form_with(model: @comment, local: true, url: comments_path, method: :post) do |f| %>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>" style="<%= key == 'done' ? 'color: #3c763d;' : 'color: red;' %>">
+        <%= value %>
+      </div>
+    <% end %>
+
+    <%= f.hidden_field :post_id, value: @post.id %>
+    
+    <div class="field">
+      <%= f.label :description, t("comment") %><br />
+      <%= f.text_field :description %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit t("create_comment") %>
+    </div>
+  <% end %>
+<% end %>
+
+<% if @comments.respond_to?(:each) %>
+  <% @comments.each do |comment| %>
+    <p>@<%= comment.user.username %>: <%= comment.description %></p>
+    <% if user_signed_in? && comment.user == current_user %>
+      <%= link_to t("destroy"), comment_path(comment), method: :destroy %><br />
+    <% end %>
+  <% end %>
+<% else %>
+  <% comment = @comments %>
+  <p>@<%= comment.user.username %>: <%= comment.description %></p>
+  <% if user_signed_in? && comment.user == current_user %>
+    <%= link_to t("destroy"), comment_path(comment), method: :destroy %><br />
+  <% end %>
+<% end %>
