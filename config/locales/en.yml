@@ -51,6 +51,10 @@ en:
   comment_error_destroyed: "Comment didn't destroy. Try again later."
   post_destroyed: "Post successfully destroyed"
   post_error_destroyed: "Post didn't destroy. Try again later."
+  like_created: "Like successfully created"
+  like_error_created: "Like didn't create. Try again later."
+  like_destroyed: "Like successfully destroyed"
+  like_error_destroyed: "Like didn't destroy. Try again later."
 
   devise:
     failure:
