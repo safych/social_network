@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     resource :profile, only: :show
     resources :users, only: :update
-    resources :posts, except: :new  
+    resources :posts, except: :new
+    resources :comments, only: [:create, :destroy, :update]
   end
 end
