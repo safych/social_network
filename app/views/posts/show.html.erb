@@ -36,13 +36,13 @@
   <% @comments.each do |comment| %>
     <p>@<%= comment.user.username %>: <%= comment.description %></p>
     <% if user_signed_in? && comment.user == current_user %>
-      <%= link_to t("destroy"), comment_path(comment), method: :destroy %><br />
+      <%= link_to t("destroy"), comment_path(comment), data: { turbo_method: :delete } %><br />
     <% end %>
   <% end %>
 <% else %>
   <% comment = @comments %>
   <p>@<%= comment.user.username %>: <%= comment.description %></p>
   <% if user_signed_in? && comment.user == current_user %>
-    <%= link_to t("destroy"), comment_path(comment), method: :destroy %><br />
+    <%= link_to t("destroy"), comment_path(comment), data: { turbo_method: :delete } %><br />
   <% end %>
 <% end %>
