@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user
 
   def update
-    if UserUpdater.new(@user, user_params, self).update
+    if UserUpdater.new(@user, user_params, self).call
       flash[:done] = I18n.t("profile_was_successfully_updated")
       redirect_to profile_path
     else

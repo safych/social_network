@@ -5,13 +5,13 @@ class UserUpdater
     @controller = controller
   end
 
-  def update
-    update_param
+  def call
+    update
   end
 
   private
 
-  def update_param
+  def update
     if @user.valid_password?(@params[:password])
       if @user.update(@params.except(:password))  
         bypass_sign_in(@user)
