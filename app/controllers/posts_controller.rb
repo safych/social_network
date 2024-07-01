@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def destroy
     notice = nil
-    if PostDestroyer(@post, notice, current_user.id).destroy
+    if PostDestroyer.new(@post, notice, current_user.id).call
       flash[:done] = notice
     else
       flash[:error] = notice

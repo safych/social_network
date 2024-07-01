@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
 
   def destroy
     notice = nil
-    if CommentDestroyer(@comment, notice, current_user.id).destroy
+    if CommentDestroyer.new(@comment, notice, current_user.id).call
       flash[:done] = notice
     else
       flash[:error] = notice
@@ -29,7 +29,7 @@ class CommentsController < ApplicationController
   private
 
   def find_comment
-    @comment = Comment.find(params[id])
+    @comment = Comment.find(params[:id])
   end
 
   def comment_params

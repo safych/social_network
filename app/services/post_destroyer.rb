@@ -5,8 +5,8 @@ class PostDestroyer
     @user_id = user_id
   end
 
-  def destroy
-    destroy_post
+  def call
+    destroy
   end
 
   private

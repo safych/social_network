@@ -1,17 +1,17 @@
 class CommentDestroyer
-  def def initialize(comment, notice, user_id)
+  def initialize(comment, notice, user_id)
     @comment = comment
     @notice = notice
     @user_id = user_id
   end
 
-  def destroy
-    destroy_comment
+  def call
+    destroy
   end
 
   private
 
-  def destroy_comment
+  def destroy
     if @comment.user_id == @user_id
       if @comment.destroy
         @notice = I18n.t("comment_destroyed")
