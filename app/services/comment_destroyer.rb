@@ -1,4 +1,7 @@
 class CommentDestroyer
+  attr_reader :comment, :user_id
+  attr_accessor :notice
+
   def initialize(comment, notice, user_id)
     @comment = comment
     @notice = notice

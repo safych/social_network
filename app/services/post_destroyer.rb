@@ -1,4 +1,7 @@
 class PostDestroyer
+  attr_reader :post, :user_id
+  attr_accessor :notice
+
   def initialize(post, notice, user_id)
     @post = post
     @notice = notice
